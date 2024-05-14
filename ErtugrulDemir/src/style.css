@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+
+.margin-y {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body, html {
+    background-color: #153448 ;
+    font-family: 'Poppins', sans-serif;
+    color: white  ;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  font-weight: 300;  
+}
+.navbar a{
+  text-decoration: none;
+  color: white;
+}
+.logo{
+  margin-left: 30px;
+  font-weight: bold;
+  font-size: x-large;
+}
+.list{
+  list-style: none;
+  display: flex;
+  gap:30px;
+  color: #fff;
+  margin-right: 30px;
+}
+
+#toggler,.navbar label{
+  color: #ffffff;
+  display: none;
+}
+
+@media screen and
+(max-width: 600px){
+  .menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .logo{
+    margin-left: 0px;
+  }
+  .list{
+    flex-direction: column;
+    align-items: left;
+    padding: 20px;
+  }
+  .navbar label{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  #toggler:checked ~ .menu{
+    max-height: 100%;
+  }
+}
+
+/* ------------------------------ */
+
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10rem;
+}
+  
+.home-image {
+    border-radius: 5%;
+    width: 20rem; /* Resmin genişliği */
+    border: 15px solid #3C5B6F;
+    transition: 0.3s;
+}
+
+.home-image:hover {
+  opacity: 0.8;
+  width: 19.8rem;
+}
+  
+.home p {
+    opacity: 0.5;
+}
+  
+.home-header {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.home button {
+    width: 15rem;
+    padding: 0.5rem;
+    font-weight: lighter;
+    background: transparent;
+    border: #948979 1px solid;
+}
+
+.home button:hover {
+  background-color: #948979;
+}
+  
+ @media only screen and (max-width: 768px) {
+    .home {
+      flex-direction: column; /* Küçük ekranlarda dikey sıralama */
+      text-align: center; /* Metni merkeze hizalama */
+    }
+  
+    .home-image {
+      margin-left: 0; /* Mobilde resim ile metin arasındaki boşluk kaldır */
+      margin-top: 20px; /* Mobilde resim ile metin arasına biraz boşluk bırak */
+      width: 70%; /* Mobilde resmin genişliğini azalt */
+    }
+
+}
+
+/* ------------------------------ */
+
+.about {
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.about p {
+    padding-right: 250px;
+    padding-left: 250px;
+    font-weight: lighter;
+    margin-bottom: 1.75rem; 
+}
+
+
+.about-list li {
+  list-style-type: none;
+  margin-left: 1rem; /* 16px */
+  margin-right: 1rem; /* 16px */
+}
+
+.about-list a {
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .about p {
+      padding-right: 20px;
+      padding-left: 20px;
+  }
+}
+
+/* ------------------------------ */
+
+.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+}
+
+.skill-card {
+  color: white; /* White text */
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0.75; /* Default opacity */
+  cursor: pointer; /* Hand cursor on hover */
+  transition: 0.2s; 
+  background-color: #272727;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: #272727 4px solid;
+}
+
+.skill-card:hover {
+  border-bottom: 4px solid rgb(205, 133, 0);
+}
+
+.skill-card .icon {
+  text-align: left; /* Center the icon within the card */
+}
+
+
+.service-header h1{
+  font-size: 50px;
+}
+
+.service-header{
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 20px;
+  }
+}
+
+/* ------------------------------ */
+
+.skills-header {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.skills-container {
+  background-color: #3C5B6F;
+  margin: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills-card {
+  font-size: 50px;
+  opacity: 0.75;
+  font-weight: bolder;
+}
+
+.skills-card b {
+  font-size: 20px;
+  color: #DFD0B8;
+}
+
+@media only screen and (max-width: 768px) {
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* ------------------------------ */
+
+.contact {
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.contact p {
+  font-weight: lighter;
+  padding: 2px;
+}
+
+.contact button {
+  width: 10rem;
+  padding: 1rem;
+  font-weight: lighter;
+  background: transparent;
+  border: #948979 1px solid;
+  color: white;
+  margin: 5px;
+}
+
+.contact button:hover {
+  background-color: #948979;
+  text-decoration: underline;
+}
+
+.contact img {
+  margin: 10px;
+}
+
+/* ------------------------------ */
+
+
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  opacity: 0.5;
+}
